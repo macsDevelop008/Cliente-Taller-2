@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.servidor_taller2.grupo1.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PersonajeWebService" targetNamespace="http://ws.servidor_taller2.grupo1.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:9999/Servidor-Taller-SOAP/PersonajeWebService?xsd=1" namespace="http://ws.servidor_taller2.grupo1.com/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarPersonaje">
+    <part name="parameters" element="tns:insertarPersonaje" />
+  </message>
+  <message name="insertarPersonajeResponse">
+    <part name="parameters" element="tns:insertarPersonajeResponse" />
+  </message>
+  <message name="actualizarPersonaje">
+    <part name="parameters" element="tns:actualizarPersonaje" />
+  </message>
+  <message name="actualizarPersonajeResponse">
+    <part name="parameters" element="tns:actualizarPersonajeResponse" />
+  </message>
+  <message name="eliminarPersonaje">
+    <part name="parameters" element="tns:eliminarPersonaje" />
+  </message>
+  <message name="eliminarPersonajeResponse">
+    <part name="parameters" element="tns:eliminarPersonajeResponse" />
+  </message>
+  <message name="listarPersonaje">
+    <part name="parameters" element="tns:listarPersonaje" />
+  </message>
+  <message name="listarPersonajeResponse">
+    <part name="parameters" element="tns:listarPersonajeResponse" />
+  </message>
+  <message name="buscarporIdPersonaje">
+    <part name="parameters" element="tns:buscarporIdPersonaje" />
+  </message>
+  <message name="buscarporIdPersonajeResponse">
+    <part name="parameters" element="tns:buscarporIdPersonajeResponse" />
+  </message>
+  <portType name="PersonajeWebService">
+    <operation name="insertarPersonaje">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/insertarPersonajeRequest" message="tns:insertarPersonaje" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/insertarPersonajeResponse" message="tns:insertarPersonajeResponse" />
+    </operation>
+    <operation name="actualizarPersonaje">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/actualizarPersonajeRequest" message="tns:actualizarPersonaje" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/actualizarPersonajeResponse" message="tns:actualizarPersonajeResponse" />
+    </operation>
+    <operation name="eliminarPersonaje">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/eliminarPersonajeRequest" message="tns:eliminarPersonaje" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/eliminarPersonajeResponse" message="tns:eliminarPersonajeResponse" />
+    </operation>
+    <operation name="listarPersonaje">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/listarPersonajeRequest" message="tns:listarPersonaje" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/listarPersonajeResponse" message="tns:listarPersonajeResponse" />
+    </operation>
+    <operation name="buscarporIdPersonaje">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/buscarporIdPersonajeRequest" message="tns:buscarporIdPersonaje" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/PersonajeWebService/buscarporIdPersonajeResponse" message="tns:buscarporIdPersonajeResponse" />
+    </operation>
+  </portType>
+  <binding name="PersonajeWebServicePortBinding" type="tns:PersonajeWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarPersonaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPersonaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPersonaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPersonaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarporIdPersonaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PersonajeWebService">
+    <port name="PersonajeWebServicePort" binding="tns:PersonajeWebServicePortBinding">
+      <soap:address location="http://localhost:9999/Servidor-Taller-SOAP/PersonajeWebService" />
+    </port>
+  </service>
+</definitions>

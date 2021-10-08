@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.servidor_taller2.grupo1.com/" targetNamespace="http://ws.servidor_taller2.grupo1.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarPersonaje" type="tns:actualizarPersonaje" />
+  <xs:element name="actualizarPersonajeResponse" type="tns:actualizarPersonajeResponse" />
+  <xs:element name="buscarporIdPersonaje" type="tns:buscarporIdPersonaje" />
+  <xs:element name="buscarporIdPersonajeResponse" type="tns:buscarporIdPersonajeResponse" />
+  <xs:element name="eliminarPersonaje" type="tns:eliminarPersonaje" />
+  <xs:element name="eliminarPersonajeResponse" type="tns:eliminarPersonajeResponse" />
+  <xs:element name="insertarPersonaje" type="tns:insertarPersonaje" />
+  <xs:element name="insertarPersonajeResponse" type="tns:insertarPersonajeResponse" />
+  <xs:element name="listarPersonaje" type="tns:listarPersonaje" />
+  <xs:element name="listarPersonajeResponse" type="tns:listarPersonajeResponse" />
+  <xs:complexType name="eliminarPersonaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonajeVO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPersonajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarporIdPersonaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonajeVO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarporIdPersonajeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:personajeVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personajeVO">
+    <xs:sequence>
+      <xs:element name="energia" type="xs:double" />
+      <xs:element name="estadoRegistro" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaModificacion" type="xs:dateTime" />
+      <xs:element name="fuerza" type="xs:double" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="id_especie" type="xs:string" />
+      <xs:element minOccurs="0" name="id_jugador" type="xs:string" />
+      <xs:element name="mana" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPersonaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonajeVO" type="tns:personajeVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPersonajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersonaje">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPersonajeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personajeVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersonaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonajeVO" type="tns:personajeVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPersonajeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.servidor_taller2.grupo1.com/" targetNamespace="http://ws.servidor_taller2.grupo1.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarJugador" type="tns:actualizarJugador" />
+  <xs:element name="actualizarJugadorResponse" type="tns:actualizarJugadorResponse" />
+  <xs:element name="buscarporIdJugador" type="tns:buscarporIdJugador" />
+  <xs:element name="buscarporIdJugadorResponse" type="tns:buscarporIdJugadorResponse" />
+  <xs:element name="eliminarJugador" type="tns:eliminarJugador" />
+  <xs:element name="eliminarJugadorResponse" type="tns:eliminarJugadorResponse" />
+  <xs:element name="insertarJugador" type="tns:insertarJugador" />
+  <xs:element name="insertarJugadorResponse" type="tns:insertarJugadorResponse" />
+  <xs:element name="listarJugadores" type="tns:listarJugadores" />
+  <xs:element name="listarJugadoresResponse" type="tns:listarJugadoresResponse" />
+  <xs:element name="sumar" type="tns:sumar" />
+  <xs:element name="sumarResponse" type="tns:sumarResponse" />
+  <xs:complexType name="listarJugadores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarJugadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:jugadorVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jugadorVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apodo" type="xs:string" />
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="cuenta" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="estadoRegistro" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaModificacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sumar">
+    <xs:sequence>
+      <xs:element name="Vacio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sumarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarJugador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JugadorVO" type="tns:jugadorVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarJugadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarJugador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JugadorVO" type="tns:jugadorVO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarJugadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarJugador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JugadorVO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarJugadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarporIdJugador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JugadorVO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarporIdJugadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:jugadorVO" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

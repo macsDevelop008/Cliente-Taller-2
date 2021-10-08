@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.servidor_taller2.grupo1.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="JugadorWebService" targetNamespace="http://ws.servidor_taller2.grupo1.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:9999/Servidor-Taller-SOAP/JugadorWebService?xsd=1" namespace="http://ws.servidor_taller2.grupo1.com/" />
+    </xsd:schema>
+  </types>
+  <message name="sumar">
+    <part name="parameters" element="tns:sumar" />
+  </message>
+  <message name="sumarResponse">
+    <part name="parameters" element="tns:sumarResponse" />
+  </message>
+  <message name="insertarJugador">
+    <part name="parameters" element="tns:insertarJugador" />
+  </message>
+  <message name="insertarJugadorResponse">
+    <part name="parameters" element="tns:insertarJugadorResponse" />
+  </message>
+  <message name="buscarporIdJugador">
+    <part name="parameters" element="tns:buscarporIdJugador" />
+  </message>
+  <message name="buscarporIdJugadorResponse">
+    <part name="parameters" element="tns:buscarporIdJugadorResponse" />
+  </message>
+  <message name="listarJugadores">
+    <part name="parameters" element="tns:listarJugadores" />
+  </message>
+  <message name="listarJugadoresResponse">
+    <part name="parameters" element="tns:listarJugadoresResponse" />
+  </message>
+  <message name="actualizarJugador">
+    <part name="parameters" element="tns:actualizarJugador" />
+  </message>
+  <message name="actualizarJugadorResponse">
+    <part name="parameters" element="tns:actualizarJugadorResponse" />
+  </message>
+  <message name="eliminarJugador">
+    <part name="parameters" element="tns:eliminarJugador" />
+  </message>
+  <message name="eliminarJugadorResponse">
+    <part name="parameters" element="tns:eliminarJugadorResponse" />
+  </message>
+  <portType name="JugadorWebService">
+    <operation name="sumar">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/sumarRequest" message="tns:sumar" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/sumarResponse" message="tns:sumarResponse" />
+    </operation>
+    <operation name="insertarJugador">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/insertarJugadorRequest" message="tns:insertarJugador" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/insertarJugadorResponse" message="tns:insertarJugadorResponse" />
+    </operation>
+    <operation name="buscarporIdJugador">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/buscarporIdJugadorRequest" message="tns:buscarporIdJugador" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/buscarporIdJugadorResponse" message="tns:buscarporIdJugadorResponse" />
+    </operation>
+    <operation name="listarJugadores">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/listarJugadoresRequest" message="tns:listarJugadores" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/listarJugadoresResponse" message="tns:listarJugadoresResponse" />
+    </operation>
+    <operation name="actualizarJugador">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/actualizarJugadorRequest" message="tns:actualizarJugador" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/actualizarJugadorResponse" message="tns:actualizarJugadorResponse" />
+    </operation>
+    <operation name="eliminarJugador">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/eliminarJugadorRequest" message="tns:eliminarJugador" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/JugadorWebService/eliminarJugadorResponse" message="tns:eliminarJugadorResponse" />
+    </operation>
+  </portType>
+  <binding name="JugadorWebServicePortBinding" type="tns:JugadorWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="sumar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarJugador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarporIdJugador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarJugadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarJugador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarJugador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="JugadorWebService">
+    <port name="JugadorWebServicePort" binding="tns:JugadorWebServicePortBinding">
+      <soap:address location="http://localhost:9999/Servidor-Taller-SOAP/JugadorWebService" />
+    </port>
+  </service>
+</definitions>

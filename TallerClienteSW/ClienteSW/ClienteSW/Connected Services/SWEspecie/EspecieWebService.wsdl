@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.servidor_taller2.grupo1.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EspecieWebService" targetNamespace="http://ws.servidor_taller2.grupo1.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:9999/Servidor-Taller-SOAP/EspecieWebService?xsd=1" namespace="http://ws.servidor_taller2.grupo1.com/" />
+    </xsd:schema>
+  </types>
+  <message name="listarEspecies">
+    <part name="parameters" element="tns:listarEspecies" />
+  </message>
+  <message name="listarEspeciesResponse">
+    <part name="parameters" element="tns:listarEspeciesResponse" />
+  </message>
+  <message name="actualizarEspecie">
+    <part name="parameters" element="tns:actualizarEspecie" />
+  </message>
+  <message name="actualizarEspecieResponse">
+    <part name="parameters" element="tns:actualizarEspecieResponse" />
+  </message>
+  <message name="eliminarEspecie">
+    <part name="parameters" element="tns:eliminarEspecie" />
+  </message>
+  <message name="eliminarEspecieResponse">
+    <part name="parameters" element="tns:eliminarEspecieResponse" />
+  </message>
+  <message name="insertarEspecie">
+    <part name="parameters" element="tns:insertarEspecie" />
+  </message>
+  <message name="insertarEspecieResponse">
+    <part name="parameters" element="tns:insertarEspecieResponse" />
+  </message>
+  <message name="buscarporIdEspecie">
+    <part name="parameters" element="tns:buscarporIdEspecie" />
+  </message>
+  <message name="buscarporIdEspecieResponse">
+    <part name="parameters" element="tns:buscarporIdEspecieResponse" />
+  </message>
+  <portType name="EspecieWebService">
+    <operation name="listarEspecies">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/listarEspeciesRequest" message="tns:listarEspecies" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/listarEspeciesResponse" message="tns:listarEspeciesResponse" />
+    </operation>
+    <operation name="actualizarEspecie">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/actualizarEspecieRequest" message="tns:actualizarEspecie" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/actualizarEspecieResponse" message="tns:actualizarEspecieResponse" />
+    </operation>
+    <operation name="eliminarEspecie">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/eliminarEspecieRequest" message="tns:eliminarEspecie" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/eliminarEspecieResponse" message="tns:eliminarEspecieResponse" />
+    </operation>
+    <operation name="insertarEspecie">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/insertarEspecieRequest" message="tns:insertarEspecie" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/insertarEspecieResponse" message="tns:insertarEspecieResponse" />
+    </operation>
+    <operation name="buscarporIdEspecie">
+      <input wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/buscarporIdEspecieRequest" message="tns:buscarporIdEspecie" />
+      <output wsam:Action="http://ws.servidor_taller2.grupo1.com/EspecieWebService/buscarporIdEspecieResponse" message="tns:buscarporIdEspecieResponse" />
+    </operation>
+  </portType>
+  <binding name="EspecieWebServicePortBinding" type="tns:EspecieWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEspecies">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEspecie">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEspecie">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEspecie">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarporIdEspecie">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EspecieWebService">
+    <port name="EspecieWebServicePort" binding="tns:EspecieWebServicePortBinding">
+      <soap:address location="http://localhost:9999/Servidor-Taller-SOAP/EspecieWebService" />
+    </port>
+  </service>
+</definitions>
